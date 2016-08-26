@@ -1,8 +1,8 @@
 {
   "name": "@hhjcz/js-lib",
-  "version": "1.0.0",
-  "description": "Redux REST actions & reducers",
-  "main": "lib/rest/index.js",
+  "version": "1.0.3",
+  "description": "HHj javascript library",
+  "main": "lib/index.js",
   "private": false,
   "files": [
     "src",
