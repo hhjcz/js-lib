@@ -1,6 +1,6 @@
 {
   "name": "@hhjcz/js-lib",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "HHj javascript library",
   "main": "lib/index.js",
   "private": false,
