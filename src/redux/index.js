@@ -3,7 +3,7 @@ import createMapStateToProps from './createMapStateToProps'
 import createMapDispatchToProps from './createMapDispatchToProps'
 import myMiddleware from './myMiddleware'
 
-export {
+export default {
   createMapStateToProps,
   createMapDispatchToProps,
   myMiddleware,
