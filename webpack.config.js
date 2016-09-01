@@ -10,7 +10,7 @@ var config = {
     ]
   },
   output: {
-    library: '@hhjcz/js-lib',
+    library: 'Jslib',
     libraryTarget: 'umd'
   },
   plugins: [
