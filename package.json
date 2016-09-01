@@ -11,7 +11,9 @@
   "scripts": {
     "build": "babel src --copy-files --ignore spec.js,spec.jsx --out-dir lib",
     "build:watch": "npm run build -- --watch",
-    "prepublish": "npm run clean && npm run build",
+    "build:umd": "cross-env BABEL_ENV=commonjs NODE_ENV=development webpack src/index.js dist/redux-rest.js",
+    "build:umd:min": "cross-env BABEL_ENV=commonjs NODE_ENV=production webpack src/index.js dist/redux-rest.min.js",
+    "prepublish": "npm run clean && npm run build && npm run build:umd && npm run build:umd:min",
     "clean": "rm -fr lib/ || true",
     "eslint": "eslint --ext=js --ext=jsx src || true",
     "test": "mocha --compilers js:babel-register --require ./test_helper.js --reporter spec --recursive --watch-extensions jsx 'src/**/*.spec.js'",
@@ -38,9 +40,9 @@
   "homepage": "https://github.com/hhjcz/js-lib#readme",
   "dependencies": {
     "humps": "^1.1.0",
-    "immutable": "^3.8.1",
+    "immutable": "^3.8.0",
     "lodash": "^4.15.0",
-    "redux": "^3.5.2"
+    "redux": "^3.5.0"
   },
   "devDependencies": {
     "babel-cli": "^6.11.4",
@@ -53,6 +55,7 @@
     "babel-runtime": "^6.11.6",
     "chai": "^3.5.0",
     "chai-immutable": "^1.6.0",
+    "cross-env": "^2.0.1",
     "eslint": "^3.2.0",
     "eslint-config-airbnb": "^10.0.0",
     "eslint-plugin-import": "^1.10.3",
