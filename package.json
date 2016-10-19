@@ -42,7 +42,7 @@
   },
   "homepage": "https://github.com/hhjcz/js-lib#readme",
   "dependencies": {
-    "humps": "^1.1.0",
+    "humps": "^2.0.0",
     "immutable": "^3.8.0",
     "lodash": "^4.15.0",
     "redux": "^3.5.0"
